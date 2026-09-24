@@ -1,0 +1,19 @@
+[project]
+name = "starter-fastapi"
+version = "1.0.0"
+description = "REST API starter built with Python, FastAPI, Pydantic validation, Pytest, and Swagger."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.141,<1.0",
+    "uvicorn[standard]>=0.53",
+    "pydantic-settings>=2.15",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.1",
+    "httpx2>=2.13",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["app"]
